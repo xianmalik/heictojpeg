@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(swift --version)",
+      "Bash(xcode-select -p)",
+      "Read(//usr/bin/**)",
+      "Bash(mkdir -p /Users/xianmalik/gh/heictojpeg/Sources/heictojpeg && ls /Users/xianmalik/gh/heictojpeg/)",
+      "Bash(swift build *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git rm *)",
+      "Bash(screencapture -x /tmp/heictojpeg_app.png)",
+      "Bash(screencapture /tmp/heictojpeg_app.png)",
+      "WebSearch",
+      "Bash(swift -e 'import SwiftUI; print\\(\"ok\"\\)')",
+      "Bash(sw_vers)",
+      "Bash(pkill HeicToJpeg)",
+      "Bash(make run-app *)",
+      "Bash(make clean *)",
+      "Bash(HeicToJpeg.app/Contents/MacOS/HeicToJpeg)",
+      "Bash(xattr -r -d com.apple.quarantine HeicToJpeg.app)",
+      "Bash(open HeicToJpeg.app)"
+    ]
+  }
+}
