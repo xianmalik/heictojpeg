@@ -20,7 +20,18 @@
       "Bash(make clean *)",
       "Bash(HeicToJpeg.app/Contents/MacOS/HeicToJpeg)",
       "Bash(xattr -r -d com.apple.quarantine HeicToJpeg.app)",
-      "Bash(open HeicToJpeg.app)"
+      "Bash(open HeicToJpeg.app)",
+      "mcp__0c24d4d4-98e2-483f-a241-cbdaa34e23e5__notion-search",
+      "Bash(ls ~/gh/arcanum 2>&1)",
+      "Bash(mkdir -p ~/gh/arcanum/04-Projects/HeicToJpeg)",
+      "Bash(sips -g pixelWidth -g pixelHeight ~/gh/heictojpeg/appicon.png)",
+      "Bash(mkdir -p AppIcon.iconset)",
+      "Bash(sips -z 16 16     appicon.png --out AppIcon.iconset/icon_16x16.png)",
+      "Bash(sips -z 32 32     appicon.png --out AppIcon.iconset/icon_16x16@2x.png)",
+      "Bash(sips -z 32 32     appicon.png --out AppIcon.iconset/icon_32x32.png)",
+      "Bash(sips -z 64 64     appicon.png --out AppIcon.iconset/icon_32x32@2x.png)",
+      "Bash(iconutil -c icns AppIcon.iconset -o Resources/AppIcon.icns)",
+      "Bash(make app *)"
     ]
   }
 }

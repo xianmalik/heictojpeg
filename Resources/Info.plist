@@ -8,6 +8,8 @@
     <string>HeicToJpeg</string>
     <key>CFBundleIdentifier</key>
     <string>com.heictojpeg.app</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>CFBundleName</key>
     <string>HEIC to JPEG</string>
     <key>CFBundlePackageType</key>
