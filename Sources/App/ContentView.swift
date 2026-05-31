@@ -60,15 +60,18 @@ struct ContentView: View {
                 SIMD2<Float>(0.00, 1.00), SIMD2<Float>(0.50, 1.00), SIMD2<Float>(1.00, 1.00),
             ],
             colors: [
-                Color(red: 0.11, green: 0.11, blue: 0.14),
-                Color(red: 0.10, green: 0.10, blue: 0.16),
-                Color(red: 0.09, green: 0.10, blue: 0.18),
-                Color(red: 0.12, green: 0.10, blue: 0.15),
-                Color(red: 0.10, green: 0.10, blue: 0.15),
-                Color(red: 0.08, green: 0.10, blue: 0.17),
-                Color(red: 0.10, green: 0.09, blue: 0.13),
-                Color(red: 0.09, green: 0.09, blue: 0.14),
-                Color(red: 0.08, green: 0.09, blue: 0.16),
+                // Top row — #bdc3c7
+                Color(red: 0.741, green: 0.765, blue: 0.780),
+                Color(red: 0.760, green: 0.780, blue: 0.792),
+                Color(red: 0.741, green: 0.765, blue: 0.780),
+                // Middle row — blended
+                Color(red: 0.480, green: 0.520, blue: 0.555),
+                Color(red: 0.457, green: 0.504, blue: 0.547),
+                Color(red: 0.440, green: 0.495, blue: 0.540),
+                // Bottom row — #2c3e50
+                Color(red: 0.173, green: 0.243, blue: 0.314),
+                Color(red: 0.185, green: 0.255, blue: 0.325),
+                Color(red: 0.173, green: 0.243, blue: 0.314),
             ]
         )
     }
