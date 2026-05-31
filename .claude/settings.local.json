@@ -31,7 +31,11 @@
       "Bash(sips -z 32 32     appicon.png --out AppIcon.iconset/icon_32x32.png)",
       "Bash(sips -z 64 64     appicon.png --out AppIcon.iconset/icon_32x32@2x.png)",
       "Bash(iconutil -c icns AppIcon.iconset -o Resources/AppIcon.icns)",
-      "Bash(make app *)"
+      "Bash(make app *)",
+      "Bash(pkill -x HeicToJpeg)",
+      "Bash(cp .build/release/HeicApp HeicToJpeg.app/Contents/MacOS/HeicToJpeg)",
+      "Bash(cp Resources/Info.plist HeicToJpeg.app/Contents/Info.plist)",
+      "Bash(cp Resources/AppIcon.icns HeicToJpeg.app/Contents/Resources/AppIcon.icns)"
     ]
   }
 }

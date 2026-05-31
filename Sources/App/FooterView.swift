@@ -22,6 +22,18 @@ struct FooterView: View {
 
     private var folderSection: some View {
         HStack(spacing: 8) {
+            // Choose / Change button — native Liquid Glass
+            Button {
+                model.chooseOutputDirectory()
+            } label: {
+                Text(model.outputDirectory == nil ? "Choose…" : "Change…")
+                    .font(.subheadline.weight(.medium))
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 7)
+            }
+            .buttonStyle(.plain)
+            .glassEffect(in: Capsule())
+
             Image(systemName: "folder.fill")
                 .font(.system(size: 14))
                 .foregroundStyle(.white.opacity(model.outputDirectory != nil ? 0.85 : 0.30))
@@ -42,18 +54,6 @@ struct FooterView: View {
                     .foregroundStyle(.white.opacity(0.30))
                     .frame(maxWidth: 220, alignment: .leading)
             }
-
-            // Choose / Change button — native Liquid Glass
-            Button {
-                model.chooseOutputDirectory()
-            } label: {
-                Text(model.outputDirectory == nil ? "Choose…" : "Change…")
-                    .font(.subheadline.weight(.medium))
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 7)
-            }
-            .buttonStyle(.plain)
-            .glassEffect(in: Capsule())
         }
     }
 
