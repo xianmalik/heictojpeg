@@ -1,3 +1,5 @@
+VERSION    := 0.1.0-preview
+
 APP_NAME   := HeicToJpeg.app
 APP_DIR    := $(APP_NAME)/Contents/MacOS
 RES_DIR    := $(APP_NAME)/Contents/Resources
@@ -35,7 +37,7 @@ cli:
 	swift build -c release --product heictojpeg
 
 dmg: app
-	bash scripts/make-dmg.sh
+	bash scripts/make-dmg.sh $(VERSION)
 
 clean:
-	rm -rf .build $(APP_NAME) HeicToJpeg.dmg .tmp-rw.dmg .dmg-stage
+	rm -rf .build $(APP_NAME) HeicToJpeg-*.dmg .tmp-rw.dmg .dmg-stage

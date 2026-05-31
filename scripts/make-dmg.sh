@@ -5,8 +5,10 @@
 
 set -euo pipefail
 
+VERSION="${1:-0.1.0-preview}"
+
 APP_NAME="HeicToJpeg.app"
-DMG_FINAL="HeicToJpeg.dmg"
+DMG_FINAL="HeicToJpeg-${VERSION}.dmg"
 DMG_TMP=".tmp-rw.dmg"
 VOL_NAME="HEIC to JPEG"
 STAGE_DIR=".dmg-stage"
@@ -35,7 +37,7 @@ fi
 
 # ── 3. Create read-write DMG from staged folder ────────────────────────────────
 echo "→ Creating writable DMG…"
-rm -f "$DMG_TMP" "$DMG_FINAL"
+rm -f "$DMG_TMP" HeicToJpeg-*.dmg
 hdiutil create \
   -srcfolder "$STAGE_DIR" \
   -volname "$VOL_NAME" \
