@@ -3,3 +3,11 @@
 *.d
 DerivedData/
 HeicToJpeg.app/
+
+# Claude Code
+.claude/
+
+# DMG build artefacts
+*.dmg
+.tmp-rw.dmg
+.dmg-stage/

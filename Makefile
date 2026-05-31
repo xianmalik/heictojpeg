@@ -8,7 +8,7 @@ PLIST_DST  := $(APP_NAME)/Contents/Info.plist
 ICON_SRC   := Resources/AppIcon.icns
 ICON_DST   := $(RES_DIR)/AppIcon.icns
 
-.PHONY: app run-app cli clean
+.PHONY: app run-app cli dmg clean
 
 app: $(BINARY_DST) $(PLIST_DST) $(ICON_DST)
 
@@ -34,5 +34,8 @@ run-app: app
 cli:
 	swift build -c release --product heictojpeg
 
+dmg: app
+	bash scripts/make-dmg.sh
+
 clean:
-	rm -rf .build $(APP_NAME)
+	rm -rf .build $(APP_NAME) HeicToJpeg.dmg .tmp-rw.dmg .dmg-stage
