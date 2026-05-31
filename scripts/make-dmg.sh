@@ -107,7 +107,19 @@ hdiutil convert "$DMG_TMP" \
   -imagekey zlib-level=9 \
   -o "$DMG_FINAL"
 
-# ── 9. Cleanup ─────────────────────────────────────────────────────────────────
+# ── 9. Set icon on the DMG file itself ────────────────────────────────────────
+if [ -f "$ICON_SRC" ]; then
+  echo "→ Setting DMG file icon…"
+  ICON_ABS="$(pwd)/$ICON_SRC"
+  DMG_ABS="$(pwd)/$DMG_FINAL"
+  osascript -e "
+    use framework \"AppKit\"
+    set theImage to current application's NSImage's alloc()'s initWithContentsOfFile_(\"$ICON_ABS\")
+    current application's NSWorkspace's sharedWorkspace()'s setIcon:theImage forFile:\"$DMG_ABS\" options:0
+  "
+fi
+
+# ── 10. Cleanup ────────────────────────────────────────────────────────────────
 rm -f "$DMG_TMP"
 rm -rf "$STAGE_DIR"
 
